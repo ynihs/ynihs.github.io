@@ -1,0 +1,25 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ynihs.androidautofillsample",
+    "sha256_cert_fingerprints":
+    ["26:E9:CC:8F:B1:62:B1:9A:4C:B7:EE:99:72:01:2B:5B:EE:C3:C3:D8:55:22:96:CE:57:28:C3:60:68:6B:86:52"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://ynihs.github.io"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ynihs.androidautofillsample",
+    "sha256_cert_fingerprints":
+    ["26:E9:CC:8F:B1:62:B1:9A:4C:B7:EE:99:72:01:2B:5B:EE:C3:C3:D8:55:22:96:CE:57:28:C3:60:68:6B:86:52"]
+  }
+}]
