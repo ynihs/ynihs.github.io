@@ -27,9 +27,14 @@
             meta.setAttribute('content', 'width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no');    
             document.head.appendChild(meta);
         </script>
+        <script type="text/javascript">
+          function fireRedirect(){
+            window.location.href="testloginredir://redirect1";
+          }
+        </script>
         <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <body>
-      成功！
+      <button onclick="fireRedirect()">Test Redirect</button>
     </body>
 </html>
