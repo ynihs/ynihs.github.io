@@ -5,10 +5,6 @@
         <meta name="description" content="">
         <meta name="referrer" content="origin">
         <title>サインイン | Android AutoFill Test</title>
-        <!--
-        <style type="text/css">
-        </style>
-        -->
         <noscript>
             <style type="text/css">
                 html {
@@ -21,6 +17,19 @@
                 }
             </style>
         </noscript>
+        <style type="text/css">
+          .form-container {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+          }
+          .text-field-input-wrapper {
+            padding: 1px;
+          }
+          .separator-pageitems {
+            padding: 5px;
+          }
+        </style>
         <script type="text/javascript">
             var meta = document.createElement('meta');
             meta.setAttribute('name', 'viewport');
@@ -35,11 +44,12 @@
     </head>
     <body>
         <form action="https://getsimpleform.com/messages?form_api_token=784af0d3130bba04f2826518fac8c39d" method="post">
-            <div class="textfield-input-wrapper">
-                <input dir="ltr" id="user-text-field" autocomplete="username" title="サインインID (Eメール)" tabindex="2" placeholder="サインインID (Eメール)" maxlength="63" type="email">
-              </div>
-            <div class="textfield-input-wrapper">
-                <input id="password-text-field" dir="ltr" autocomplete="current-password" title="パスワード" tabindex="2" placeholder="パスワード" maxlength="30" type="password">
+          <div class="form-container">
+            <div class="text-field-input-wrapper">
+                <input dir="ltr" id="user-text-field" class="form-component" autocomplete="username" title="Sign-In ID (Email Address)" tabindex="2" placeholder="Sign-In ID (Email Address)" maxlength="63" type="email">
+            </div>
+            <div class="text-field-input-wrapper">
+              <input id="password-text-field" class="form-component" dir="ltr" autocomplete="current-password" title="Password" tabindex="2" placeholder="Password" maxlength="30" type="password">
             </div>
             <div class="separator-pageitems"></div>
             <div class="columns-center">
@@ -48,12 +58,13 @@
                     <button tabindex="2" class="primary-button row-button text-button touch-feedback" onclick="dummySignIn();return false;">
                     -->
                     <button tabindex="2" class="primary-button row-button text-button touch-feedback">
-                        <span dir="ltr" class="caption row-button-flex-container">サインイン</span>
+                        <span dir="ltr" class="caption row-button-flex-container">Sign In</span>
                     </button>
                 </div>
             </div>
             <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
             <input type='hidden' name='redirect_to' value='https://ynihs.github.io/success.html' />
+          </div>
         </form>
     </body>
 </html>
