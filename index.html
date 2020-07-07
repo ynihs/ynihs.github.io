@@ -29,6 +29,10 @@
           .separator-pageitems {
             padding: 5px;
           }
+          .frame-container {
+            display: flex;
+            flex-direction: column;
+          }
         </style>
         <script type="text/javascript">
             var meta = document.createElement('meta');
@@ -38,6 +42,12 @@
         </script>
         <script type="text/javascript">
           function dummySignIn(){
+          }
+          function simulateSetCookie() {
+            var iframe = document.createElement("iframe");
+            iframe.src = "https://httpbin.org/cookies/set/testcookie/asdfjkl";
+            var element = document.getElementById("phif");
+            element.appendChild(iframe);            
           }
         </script>
         <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
@@ -66,5 +76,11 @@
             <input type='hidden' name='redirect_to' value='https://ynihs.github.io/success.html' />
           </div>
         </form>
+        <div>
+          <button class="primary-button row-button text-button touch-feedback" onclick="simulateSetCookie();return false;">
+            <span dir="ltr" class="caption row-button-flex-container">Simulate Cookie</span>
+          </button>
+        </div>
+        <div id="phif" class="frame-container"></div>
     </body>
 </html>
